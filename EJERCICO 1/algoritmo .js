@@ -25,17 +25,28 @@ const titulo = document.querySelector("#titulo");
 titulo.style.color = "brown"; */
 
 const variableUsuario = ["pepe", "laura"];
-const variableContrasenia = ["asd123", "123asd"]
-
+const variableContrasenia = ["asd123", "123asd"];
+const CANT_USUARIO = 2
 
 
 function ingresar() {
     let usuario1 = usuario.value;
     let contrasenia2 = contrasenia.value;
-    if (((variableUsuario[0] = usuario1) && (variableContrasenia[0] == contrasenia2)) || ((variableUsuario[1] == usuario1) && (variableContrasenia[1] == contrasenia2))) {
+    /* if (((variableUsuario[0] = usuario1) && (variableContrasenia[0] == contrasenia2)) || ((variableUsuario[1] == usuario1) && (variableContrasenia[1] == contrasenia2))) {
         mensaje.innerHTML = "BIENVENIDO A SU PERFIL";
         mensaje.style.color = "green";
     } else mensaje.innerHTML = "Error en su usuario o contraseña"
            mensaje.style.color = "red"; {
+        } */
+    for (let i = 0; i < CANT_USUARIO; i++) {
+        if ((variableUsuario[i] == usuario1) && (variableContrasenia[i] == contrasenia2)) {
+            mensaje.style.color = "green";
+            mensaje.innerHTML = "BIENVENIDO A SU PERFIL";
+            i = CANT_USUARIO
+        } else {
+             mensaje.innerHTML = "Error en su usuario o contraseña"
+             mensaje.style.color = "red"; 
+            }
     }
+   
 }
