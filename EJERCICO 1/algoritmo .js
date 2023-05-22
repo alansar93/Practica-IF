@@ -21,13 +21,18 @@ const contrasenia = document.querySelector("#contrasenia");
 const mensaje = document.querySelector("#mensaje");
 const titulo = document.querySelector("#titulo");
 
-titulo.innerHTML = "POR FAVOR INGRESE SU USUARIO Y CONTRASEÑA"
-titulo.style.color = "brown";
+/* titulo.innerHTML = "POR FAVOR INGRESE SU USUARIO Y CONTRASEÑA"
+titulo.style.color = "brown"; */
+
+const variableUsuario = ["pepe", "laura"];
+const variableContrasenia = ["asd123", "123asd"]
+
+
 
 function ingresar() {
     let usuario1 = usuario.value;
     let contrasenia2 = contrasenia.value;
-    if (((usuario1 == "pepe") && (contrasenia2 == "asd123")) || ((usuario1 == "laura") && (contrasenia2 == "qwerty"))) {
+    if (((variableUsuario[0] = usuario1) && (variableContrasenia[0] == contrasenia2)) || ((variableUsuario[1] == usuario1) && (variableContrasenia[1] == contrasenia2))) {
         mensaje.innerHTML = "BIENVENIDO A SU PERFIL";
         mensaje.style.color = "green";
     } else mensaje.innerHTML = "Error en su usuario o contraseña"
